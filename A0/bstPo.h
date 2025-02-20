@@ -2,7 +2,7 @@
 MyException excp("My Error");
 // I could NOT get the #ifndef thing to work with Types so I renamed bstP.cpp to bstPo.h
 // this wont affect the result at all but its sort of not what was asked in the assignment so... idk
-// theres still 3 files and at least one header file though :D
+// theres still 3 files and at least one header file though :D 
 
 template <class Type>
 BST<Type>::BST() {
