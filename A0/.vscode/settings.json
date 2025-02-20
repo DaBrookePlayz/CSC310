@@ -1,0 +1,7 @@
+{
+    "makefile.makefilePath": "makefile",
+    "files.associations": {
+        "string": "cpp",
+        "iostream": "cpp"
+    }
+}
