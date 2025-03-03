@@ -10,7 +10,8 @@ struct Node {
 
     Node (int value) {
         key = value;
-        left = right = NULL;
+        left = NULL;
+        right = NULL;
         height = 0;
     }
 };
@@ -27,7 +28,7 @@ class avl {
         int balanceFactor(Node* node);
 
         Node* rotateRight(Node* y);
-        Node* rotateLeft(Node* y);
+        Node* rotateLeft(Node* x);
 
         void printTree(Node* root, int space);
         void destroyTree(Node* node);

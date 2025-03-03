@@ -2,23 +2,23 @@ INCLUDE_DIRS := Includes
 CC 			 := g++
 CFLAGS 		 := -I$(INCLUDE_DIRS)
 
-OBJS 		 := main.o dsw.o customErrorClass.o
-DEPS 		 := dsw.h customErrorClass.h
+OBJS 		 := main.o avl.o customErrorClass.o
+DEPS 		 := avl.h customErrorClass.h
 
 .PHONY: clean all
 
-all: main.o A2 clean
+all: main.o A3 clean
 
 customErrorClass.o: customErrorClass.cpp ${DEPS}
 	$(CC) -c -o $@ $(CFLAGS) $<
 
-dsw.o: dsw.cpp ${DEPS}
+avl.o: avl.cpp ${DEPS}
 	$(CC) -c -o $@ $(CFLAGS) $<
 
 main.o: main.cpp ${DEPS}
 	$(CC) -c -o $@ $(CFLAGS) $<
 
-A2: $(OBJS)
+A3: $(OBJS)
 	$(CC) -o $@ $^ $(CFLAGS)
 
 clean:
