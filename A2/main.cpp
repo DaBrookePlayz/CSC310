@@ -2,6 +2,7 @@
 #include "customErrorClass.h"
 
 int main() {
+    try {
     BST bst;
     bst.insert(10);
     bst.insert(14);
@@ -19,6 +20,9 @@ int main() {
 
     cout << "DSW balanced BST: ";
     bst.display();
+    }  catch (MyException &e){
+        cerr<<e.what()<<endl;
+    }
 
     return 0;
 }
